@@ -18,8 +18,8 @@ Backend API completo para la aplicación de e-commerce Flexreact. Construido con
 
 | Método | Endpoint | Auth | Descripción |
 |--------|----------|------|-------------|
-| GET | `/api/productos` | ❌ | Listar todos los productos |
-| GET | `/api/productos/:id` | ❌ | Obtener producto por ID |
+| GET | `/api/productos` | ✅ | Listar todos los productos |
+| GET | `/api/productos/:id` | ✅ | Obtener producto por ID |
 | POST | `/api/productos` | ✅ | Crear producto (Admin) |
 | PUT | `/api/productos/:id` | ✅ | Actualizar producto |
 | DELETE | `/api/productos/:id` | ✅ | Eliminar producto |
