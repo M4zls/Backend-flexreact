@@ -14,8 +14,8 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar app.jar
 
-# Railway inyecta PORT
+# Render inyecta PORT automáticamente
 ENV PORT=8080
 
-# Forzar IPv4 por si el host resuelve IPv6 y no hay ruta
-ENTRYPOINT ["sh", "-c", "java -Djava.net.preferIPv4Stack=true -jar app.jar --server.port=${PORT}"]
+# Optimizaciones para producción
+ENTRYPOINT ["sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -Djava.net.preferIPv4Stack=true -Xmx512m -Xms256m -jar app.jar --server.port=${PORT}"]

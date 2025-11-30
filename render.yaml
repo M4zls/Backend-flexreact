@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: flexreact-backend
+    runtime: docker
+    dockerfilePath: ./dockerfile
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRATION
+        value: 3600000
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+    healthCheckPath: /api/health
